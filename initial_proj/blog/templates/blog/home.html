@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+    {% if title %}
+        <title>My Blog - {{ title }}</title>
+    {% else %}
+        <title>My Blog</title>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+        <p>By {{ post.username }} on {{ post.date }}</p>
+        <p>{{ post.text }}</p>
+    {% endfor %}
+{% endblock %}
