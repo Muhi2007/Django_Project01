@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,10 +6,25 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     {% block title%} {% endblock %}
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
     <script src='main.js'></script>
 </head>
 <body>
-    {% block content %} {% endblock %}
+    
+    <div id="header-div"> 
+        <h1>My Blog</h1>
+        <ul>
+            <a href="">Home</a>
+            <a href="">About</a>
+        </ul>
+    </div>
+    <div id="main-div">
+        <div id="nav-div">
+            <p>This place is for creating and posting blogs. For now it is under development.</p>
+        </div>
+        <div id="posts-div">
+            {% block content %} {% endblock %}
+        </div>
+    </div>
 </body>
 </html>

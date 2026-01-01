@@ -6,12 +6,17 @@
     {% else %}
         <title>My Blog</title>
     {% endif %}
-{% endblock %}
+{% endblock title %}
 
 {% block content %}
     {% for post in posts %}
-        <h2>{{ post.title }}</h2>
-        <p>By {{ post.author }} on {{ post.date|date:"F d, Y" }}</p>
-        <p>{{ post.content }}</p>
+        <div id="blog-post">
+            <div id="blog-post-header">
+                <h2>{{ post.title }}</h2>
+                <p>By {{ post.author }} on {{ post.date|date:"F d, Y" }}</p>
+            </div>
+            <p>{{ post.content }}</p>
+        </div>
+        <br>
     {% endfor %}
-{% endblock %}
+{% endblock content %}
