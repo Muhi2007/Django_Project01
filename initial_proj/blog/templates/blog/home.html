@@ -11,7 +11,7 @@
 {% block content %}
     {% for post in posts %}
         <h2>{{ post.title }}</h2>
-        <p>By {{ post.username }} on {{ post.date }}</p>
-        <p>{{ post.text }}</p>
+        <p>By {{ post.author }} on {{ post.date|date:"F d, Y" }}</p>
+        <p>{{ post.content }}</p>
     {% endfor %}
 {% endblock %}
