@@ -101,3 +101,66 @@ a:hover {
     border-radius: 5px;
     background-color: teal;
 }
+
+.form-container {
+    background-color: white;
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: teal;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block; 
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #006666;
+}
