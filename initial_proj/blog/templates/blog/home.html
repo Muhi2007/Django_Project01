@@ -9,14 +9,23 @@
 {% endblock title %}
 
 {% block content %}
-    {% for post in posts %}
-        <div id="blog-post">
-            <div id="blog-post-header">
-                <h2>{{ post.title }}</h2>
-                <p>By {{ post.author }} on {{ post.date|date:"F d, Y" }}</p>
-            </div>
-            <p>{{ post.content }}</p>
+<div id="main-div">
+        <div id="nav-div">
+            <p>This place is for creating and posting blogs. For now it is under development.</p>
         </div>
-        <br>
-    {% endfor %}
+        <div id="posts-div">
+            
+                {% for post in posts %}
+                    <div id="blog-post">
+                        <div id="blog-post-header">
+                            <h2>{{ post.title }}</h2>
+                            <p>By {{ post.author }} on {{ post.date|date:"F d, Y" }}</p>
+                        </div>
+                        <p>{{ post.content }}</p>
+                    </div>
+                    <br>
+                {% endfor %}
+            
+        </div>
+    </div>
 {% endblock content %}
