@@ -204,3 +204,17 @@ form input[type="email"] {
 .btn-submit:hover {
     background-color: #006666;
 }
+
+.btn-logout {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+    color: #333;
+}
+
+.btn-logout:hover {
+    color: #006666;
+    text-decoration: underline;
+}
