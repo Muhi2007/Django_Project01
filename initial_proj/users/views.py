@@ -4,7 +4,7 @@ from django.contrib import messages
 from .forms import UserSignupForm
 
 # Create your views here.
-def signin(request):
+def signup(request):
     if request.method == "POST":
         form = UserSignupForm(request.POST)
         if form.is_valid():
@@ -15,4 +15,4 @@ def signin(request):
     else:
         form = UserSignupForm()
     
-    return render(request, "users/login.html", {"form": form})
+    return render(request, "users/signup.html", {"form": form})

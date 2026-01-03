@@ -1,30 +1,22 @@
 {% extends "blog/base.html" %}
 
-{% block title %}
-    {% if title %}
-        <title>My Blog - {{ title }}</title>
-    {% else %}
-        <title>My Blog</title>
-    {% endif %}
-{% endblock title %}
-
 {% block content %}
-<div id="main-div">
-        <div id="nav-div">
+<div class="main-div">
+        <div class="nav-div">
             <p>This place is for creating and posting blogs. For now it is under development.</p>
         </div>
-        <div id="posts-div">
-            
-                {% for post in posts %}
-                    <div id="blog-post">
-                        <div id="blog-post-header">
-                            <h2>{{ post.title }}</h2>
-                            <p>By {{ post.author }} on {{ post.date|date:"F d, Y" }}</p>
-                        </div>
-                        <p>{{ post.content }}</p>
+        <div class="posts-div">
+
+            {% for post in posts %}
+                <div class="blog-post">
+                    <div class="blog-post-header">
+                        <h2>{{ post.title }}</h2>
+                        <p>By {{ post.author }} on {{ post.date|date:"F d, Y" }}</p>
                     </div>
-                    <br>
-                {% endfor %}
+                    <p>{{ post.content }}</p>
+                </div>
+                <br>
+            {% endfor %}
             
         </div>
     </div>
