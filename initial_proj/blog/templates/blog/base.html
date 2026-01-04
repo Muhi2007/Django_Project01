@@ -41,7 +41,13 @@
             <div class="alert alert-{{ message.tags }}">{{ message }}</div>
         {% endfor %}
     {% endif %}
-    {% block content %} {% endblock %}
-    
+    <div class="main-div">
+        <div class="nav-div">
+                <p>This place is for creating and posting blogs. For now it is under development.</p>
+        </div>
+        <div class="base-div">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
 </body>
 </html>

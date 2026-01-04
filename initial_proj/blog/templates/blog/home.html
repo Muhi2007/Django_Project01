@@ -1,23 +1,14 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-<div class="main-div">
-        <div class="nav-div">
-            <p>This place is for creating and posting blogs. For now it is under development.</p>
+    {% for post in posts %}
+        <div class="blog-post">
+            <div class="blog-post-header">
+                <h2>{{ post.title }}</h2>
+                <p>By {{ post.author }} on {{ post.date|date:"F d, Y" }}</p>
+            </div>
+            <p>{{ post.content }}</p>
         </div>
-        <div class="posts-div">
-
-            {% for post in posts %}
-                <div class="blog-post">
-                    <div class="blog-post-header">
-                        <h2>{{ post.title }}</h2>
-                        <p>By {{ post.author }} on {{ post.date|date:"F d, Y" }}</p>
-                    </div>
-                    <p>{{ post.content }}</p>
-                </div>
-                <br>
-            {% endfor %}
-            
-        </div>
-    </div>
+        <br>
+    {% endfor %}
 {% endblock content %}

@@ -3,7 +3,12 @@
 {% block content %}
     <div class="profile-container">
         <h2>User Profile</h2>
-        <p><strong>Username:</strong> {{ user.username }}</p>
-        <p><strong>Email:</strong> {{ user.email }}</p>
+        <div class="blogger-profile">
+            <img src="{{ user.profile.image.url }}" alt="{{ user.username }}'s profile picture" class="profile-image">
+            <div>
+                <p><strong>Username:</strong> {{ user.username }}</p>
+                <p><strong>Email:</strong> {{ user.email }}</p>
+            </div>
+        </div>
     </div>
 {% endblock %}
