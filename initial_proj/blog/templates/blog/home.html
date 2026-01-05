@@ -9,8 +9,7 @@
                     <p>By {{ post.author }} on {{ post.date|date:"F d, Y" }}</p>
                 </div>
                 <div>
-                    
-                    <h2>{{ post.title }}</h2>
+                    <h2><a href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
                 </div>
             </div>
             <p>{{ post.content }}</p>
