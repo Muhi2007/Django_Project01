@@ -6,6 +6,10 @@
             <div>
                 <img src="{{ object.author.profile.image.url }}" alt="{{ object.author.username }}'s profile picture" class="post-author-image">
                 <p>By {{ object.author }} on {{ object.date|date:"F d, Y" }}</p>
+                {% if user == object.author %}
+                    <a href="{% url 'post-update' object.id %}">Update Post</a>
+                    <a href="{% url 'post-delete' object.id %}">Delete Post</a>
+                {% endif %}
             </div>
             <div>
                 <h2>{{ object.title }}</h2>
