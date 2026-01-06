@@ -59,6 +59,10 @@ a:hover {
     font-size: 18px;
 }
 
+.pagination a:hover {
+    font-size: 16px;
+}
+
 .links-div ul {
     display: flex;
     flex-direction: row;
@@ -135,7 +139,7 @@ a:hover {
 .blog-post {
     background-color: whitesmoke;
     border: 1px solid black;
-    height: 20vh;
+    height: min-content;
     width: 40vw;
     border-radius: 5px;
 }
@@ -147,6 +151,15 @@ a:hover {
     justify-content: space-between ;
 }
 
+.blog-post-second {
+    width: 50%;
+    justify-content: end;
+}
+
+.blog-post-second a:hover {
+    font-size: 16px;
+}
+
 .post-author-image {
     width: 50px;
     height: 50px;
@@ -154,6 +167,9 @@ a:hover {
     object-fit: cover;
 }
 
+.pagination {
+    height: 60px;
+}
 
 .blogger-profile {
     width: 100%;

@@ -5,14 +5,15 @@
         <div class="blog-post-header">
             <div>
                 <img src="{{ object.author.profile.image.url }}" alt="{{ object.author.username }}'s profile picture" class="post-author-image">
-                <p>By {{ object.author }} on {{ object.date|date:"F d, Y" }}</p>
-                {% if user == object.author %}
-                    <a href="{% url 'post-update' object.id %}">Update Post</a>
-                    <a href="{% url 'post-delete' object.id %}">Delete Post</a>
-                {% endif %}
+                <a href="{% url 'user-post' object.author.username %}">By {{ object.author }}</a>
+                <p>{{ object.date|date:"F d, Y" }}</p>
             </div>
-            <div>
+            <div class="blog-post-second">
                 <h2>{{ object.title }}</h2>
+                {% if user == object.author %}
+                    <a class="btn btn-info" href="{% url 'post-update' object.id %}">Update Post</a>
+                    <a class="btn btn-danger" href="{% url 'post-delete' object.id %}">Delete Post</a>
+                {% endif %}
             </div>
         </div>
         <p>{{ object.content }}</p>

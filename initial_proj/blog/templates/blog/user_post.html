@@ -1,6 +1,8 @@
 {% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
+<h1 style="color: black;">User {{ view.kwargs.username }}'s {{ page_obj.paginator.count }} Posts</h1>
     {% for post in posts %}
         <div class="blog-post">
             <div class="blog-post-header">
